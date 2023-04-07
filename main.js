@@ -106,6 +106,7 @@ function moveBall(){
     
     //Surrounding wall collision detection(x-axis)
     //right and left walls
+    //git changes
 
     if( ball.x > canvas.width || ball.x < 0)
     {
