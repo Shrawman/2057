@@ -198,9 +198,11 @@ update();
 //Targetting the right and left arrow keys
 function keyDown(e){
     if(e.key === 'Right' || e.key === 'ArrowRight'){
-
+        paddle.dx=4;
+             paddle.x+= paddle.dx;
     } else if(e.key === 'Left' || e.key === 'ArrowLeft'){
-
+        paddle.dx=-4;
+           paddle.x-= paddle.dx;
     } 
 }
 
