@@ -103,16 +103,24 @@ function movePaddle(){
 
 //Function to move ball on the canvas
 function moveBall(){
-    ball.x += ball.dx;
-    ball.y += ball.dy;
-
+    
     //Surrounding wall collision detection(x-axis)
     //right and left walls
-    
+
+    if( ball.x > canvas.width || ball.x < 0)
+    {
+        ball.dx=-ball.dx;
+    }
 
     //Surrounding wall collision detection(y-axis)
     //top and bottom walls
-    
+    if(ball.y > canvas.height || ball.y < 0)
+    { 
+        ball.dy= -ball.dy;
+    }
+
+    ball.x += ball.dx;
+    ball.y += ball.dy;
 
     //Paddle collision functionality
     
